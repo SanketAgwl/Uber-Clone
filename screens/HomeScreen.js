@@ -3,13 +3,12 @@ import tw from 'twrnc'
 import { StyleSheet, Text, SafeAreaView, View, Image } from 'react-native'
 import NavOptions from '../components/NavOptions'
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
-import {GOOGLE_PLACES_APIKEY} from '@env'
+import {GOOGLE_MAPS_APIKEY} from '@env'
 import { useDispatch } from 'react-redux';
 import { setOrigin, setDestination } from '../slices/navSlice';
 import NavFavorites from '../components/NavFavourite';
 
 const HomeScreen = () => {
-
     const dispatch = useDispatch();
 
     return (
@@ -28,7 +27,7 @@ const HomeScreen = () => {
                     textInput: {fontSize: 18}
                 }}
                 query={{
-                key: 'AIzaSyDKE2-YIZ580MiR8vmWuqbOuzE4_gMyxpM',
+                key: GOOGLE_MAPS_APIKEY,
                 language: 'en', // language of the results
                 }}
                 fetchDetails= {true}

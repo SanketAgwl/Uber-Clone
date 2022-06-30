@@ -3,7 +3,7 @@ import { Icon } from "react-native-elements";
 import React from 'react'
 import tw from 'twrnc'
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
-import {GOOGLE_PLACES_APIKEY} from '@env'
+import {GOOGLE_MAPS_APIKEY} from '@env'
 import { useDispatch } from 'react-redux';
 import { setDestination } from '../slices/navSlice';
 import { useNavigation } from '@react-navigation/native';
@@ -24,7 +24,7 @@ const NavigateCard = () => {
         <GooglePlacesAutocomplete
                 placeholder="Enter Destination"
                 query={{
-                key: 'AIzaSyDKE2-YIZ580MiR8vmWuqbOuzE4_gMyxpM',
+                key: GOOGLE_MAPS_APIKEY,
                 language: 'en', // language of the results
                 }}
                 styles= {toInputBoxStyles}
